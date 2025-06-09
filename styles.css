@@ -101,6 +101,10 @@ header {
   display: none;
 }
 
+.telegram{
+  color: white;
+  text-decoration: none;
+}
 .open-form-btn {
   padding: 12px 24px;
   background-color: #6c63ff;
