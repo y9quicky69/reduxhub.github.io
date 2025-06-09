@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" href="../images/redux-icon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redux HUB | Головна</title>
+</head>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('reduxForm');
+    const paymentMessage = document.getElementById('paymentMessage');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      form.classList.add('hidden');
+      paymentMessage.classList.remove('hidden');
+      alert("Оброблено! Натиснiть 'ОК'");
+    });
+  });
+</script>
+
+
+
+
+
+<body>
+    <header class="main-header">
+  <div class="container">
+    <div class="left-side">
+        <a href="../index.html" class="main-go">
+            <img src="../images/redux-icon.png" alt="Redux Icon" class="logo-absolute"  >
+        </a>
+    </div>
+    <nav class="nav">
+      <a href="../pages/reduxes.html">Редукси</a>
+      <a href="../pages/privat_reduxes.html">Приватні редукси</a>
+      <a href="../pages/slives-reduxes.html">Зливи редуксів</a>
+    </nav>
+  </div>
+</header>
+<section class="custom-order">
+  <h2 class="form-title">Замовлення приватного редукса</h2>
+  <form class="redux-form" id="reduxForm">
+    <label for="name">Назва редукса (до 500 символів):</label>
+    <textarea id="name" maxlength="500" required></textarea>
+
+    <label for="wishes">Побажання (до 4000 символів):</label>
+    <textarea id="wishes" maxlength="4000" required></textarea>
+
+    <button type="submit" class="submit-btn">Надіслати</button>
+  </form>
+
+  <div class="payment-instruction hidden" id="paymentMessage">
+    <h2>Дякуємо за замовлення!</h2>
+    <p>Для обробки замовлення, переведіть <strong>200$</strong> на карту:</p>
+    <p class="card-number">5168 7520 2962 9493</p>
+    <p>Після оплати напишіть <a href="https://t.me/ktxxs223" target="_blank">сюди</a> з підтвердженням.</p>
+  </div>
+</section>
+
+
+
+<footer>
+    <h1>Redux Hub</h1>
+    
+    
+    <h3>Соцiальнi мережi</h3>
+    <br>
+    <div class="socials">
+        <a href="https://discord.gg/pccE8vSQBM" class="discord">Discord</a>
+        <a href="https://t.me/ReduxHubIO" class="telegram">Telegram</a>
+        <a href="https://github.com/ReduxHub" class="github">Github</a>
+    </div>
+    <br>
+    <p class="footer-text">© 2025 Redux Hub | Усi права захищено</p>
+</footer>
+</body>
+<style>
+  .custom-order {
+    background-color: #1e1e2f;
+    padding: 30px;
+    border-radius: 12px;
+    margin: 40px auto;
+    width: 80%;
+    max-width: 700px;
+    color: #fff;
+  }
+
+  .custom-order label {
+    display: block;
+    margin: 15px 0 5px;
+  }
+
+  .custom-order textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: none;
+    resize: vertical;
+  }
+
+  .submit-btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #5c67f2;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .submit-btn:hover {
+    background-color: #474fe0;
+  }
+
+  .payment-instruction {
+    margin-top: 30px;
+    background-color: #2a2a3d;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .payment-instruction .card-number {
+    font-size: 20px;
+    font-weight: bold;
+    color: #00ffcc;
+    margin: 15px 0;
+  }
+
+  .hidden {
+    display: none;
+  }
+</style>
+
+</html>

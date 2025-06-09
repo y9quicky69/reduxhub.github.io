@@ -1,0 +1,344 @@
+@font-face {
+  font-family: 'VKSansDisplay';
+  src: url('./fonts/VKSansDisplay-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Використання */
+body {
+  font-family: 'VKSansDisplay', sans-serif;
+  background-color: #303030;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100px; /* якщо така висота */
+  z-index: 10;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+.main-header {
+  background-color: #242424;
+  box-shadow: 0 0 100px 9px rgba(226, 40, 255, 0.25), 0 4px 4px rgba(0, 0, 0, 0.25);
+  height: 126px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.logo-absolute {
+  position: absolute;
+  left: 36px;
+  top: 24px;
+  width: 77px;
+  height: 77px;
+  object-fit: contain;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.redux-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  padding: 40px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.redux-card {
+  position: relative;
+  background-color: #383838;
+  border: 2px solid #555;
+  border-radius: 16px;
+  padding: 20px;
+  height: 180px;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+  transition: 0.3s;
+  overflow: hidden;
+}
+
+.redux-card:hover {
+  background-color: #444;
+}
+
+.download-buttons {
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.custom-order {
+  text-align: center;
+  margin: 100px auto;
+  max-width: 600px;
+  padding: 20px;
+}
+.hidden {
+  display: none;
+}
+
+.open-form-btn {
+  padding: 12px 24px;
+  background-color: #6c63ff;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.open-form-btn:hover {
+  background-color: #574fd6;
+}
+
+.redux-form {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.redux-form label {
+  font-weight: bold;
+  text-align: left;
+}
+
+.redux-form textarea {
+  resize: vertical;
+  min-height: 80px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.submit-btn {
+  padding: 10px 20px;
+  background-color: #28a745;
+  font-size: 16px;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #218838;
+}
+
+.payment-instruction {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 12px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.payment-instruction .card-number {
+  font-size: 20px;
+  font-weight: bold;
+  color: #d63384;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.redux-card:hover .download-buttons {
+  opacity: 1;
+}
+.hero {
+  padding-top: 140px; /* або трохи менше/більше, якщо потрібно */
+}
+
+.hero {
+  
+  max-height: calc(100vh - 200px); /* з урахуванням висоти хедера та футера */
+  overflow-y: auto;
+  background: #111;
+  display: flex;
+  justify-content: center;
+}
+
+.redux-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 квадрати в ряд */
+  gap: 20px;
+  width: 100%;
+  max-width: 1000px;
+}
+.link-to-redux{
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 56;
+  background-color: #a950d4;
+  padding: 5px 5px ;
+  border-radius: 5px;
+  transition: background-color, box-shadow 0.3s ease;
+  cursor: pointer
+}
+.link-to-redux:hover{
+  background-color: #9041d5;
+  box-shadow: 0px 0px 10px  #6b6b6b  ;
+}
+.redux-card {
+  background: #1e1e1e;
+  border-radius: 12px;
+  aspect-ratio: 1 / 1; /* квадратна форма */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 14px;
+  position: relative;
+  transition: transform 0.2s;
+}
+
+.redux-card:hover {
+  transform: scale(1.05);
+}
+
+.download-buttons {
+  position: absolute;
+  bottom: 10px;
+  display: flex;
+  gap: 6px;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.redux-card:hover .download-buttons {
+  opacity: 1;
+}
+
+.download-buttons a {
+  padding: 4px 8px;
+  background-color: #444;
+  color: #fff;
+  border-radius: 6px;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.download-buttons a:hover {
+  background-color: #666;
+}
+
+.download-buttons a {
+  background-color: #8e44ad;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.2s ease;
+}
+
+.download-buttons a:hover {
+  background-color: #a950d4;
+}
+
+.nav {
+  display: flex;
+  gap: 60px;
+}
+
+.nav a {
+  position: relative;
+  font-size: 32px;
+  line-height: 40px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px; /* расстояние между текстом и линией */
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  transition: width 0.3s ease;
+}
+
+.nav a:hover::after {
+  width: 100%;
+}
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 126px); /* повний екран мінус хедер */
+  background-color: #2a2a2a;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 64px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0;
+}
+
+.hero-subtitle {
+  font-size: 24px;
+  color: #aaaaaa; /* світло-світло сірий */
+  margin-top: 10px;
+  font-weight: 300;
+}
+
+
+footer{
+    background-color: #242424;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+footer a:hover {
+    text-decoration: underline;;
+}
